@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dom</title>
+</head>
+<style>
+  .q3 {
+    border-style: solid;
+    border-radius: 25px;
+    height: 100px;
+    width: 200px;
+    background-color: antiquewhite;
+
+
+  }
+</style>
+
+
+<body>
+  <div class="q3"></div>
+
+  <script>
+    let element = document.createElement("p");
+    element.innerText = "main tum sa payyer nhi kar ta hoon ";
+    element.style.backgroundColor = 'black';
+    element.style.color = 'green';
+    let body = document.querySelector("body");
+    body.append(element);
+
+
+    let button = document.createElement('button');
+    button.innerText = "click me";
+    button.style.color = 'white';
+    element.prepend(button);
+
+
+    let div = document.getElementsByClassName('q3')
+    body.prepend(div[0]);
+
+
+  </script>
+</body>
+
+</html>

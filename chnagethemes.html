@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+</head>
+<style>
+  h1 {
+    font: optional;
+  }
+
+  h1.heading {
+    color: green;
+    font-weight: 50px;
+  }
+
+  button {
+    border-style: solid;
+    border-radius: 25px;
+    background-color: blue;
+
+  }
+
+  button.chnagecolor {
+    color: white
+  }
+
+  .light {
+    background-color: white;
+    color: black;
+  }
+
+  .dark {
+    background-color: rgb(11, 11, 11);
+    color: rgb(204, 192, 192);
+  }
+</style>
+
+<body>
+  <h1 class="heading">we apply the logical for the change the backgrounf themes</h1>
+  <button class="chnagecolor">change color</button>
+
+
+  <script>
+
+    let button = document.querySelector('button')
+    let body = document.querySelector('body')
+
+//using toggle
+button.addEventListener('click',()=>{
+body.classList.toggle('dark')
+
+})
+
+
+/*
+    //using css
+    button.addEventListener('click', () => {
+      if (body.className === 'light') {
+        body.className = 'dark'
+      }
+      else {
+        body.className = 'light'
+      }
+
+    })
+
+//using js
+
+    /* let themes = "light"  button.addEventListener('click', () => {
+
+
+
+
+      if (themes === 'light') {
+
+       body.style.backgroundColor = "black";
+         body.style.color = "white";
+         themes='black'
+       }
+       else {
+         body.style.backgroundColor = "white";
+         body.style.color = "black";
+         themes='light'
+       }
+
+     })
+
+ */
+
+
+  </script>
+</body>
+
+</html>
