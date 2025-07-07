@@ -1,0 +1,263 @@
+📋 Complete Events List covering:
+
+Mouse Events (11 events)
+Keyboard Events (3 events)
+Form Events (10 events)
+Window/Document Events (8 events)
+Clipboard Events (3 events)
+Drag & Drop Events (7 events)
+Touch Events (4 events)
+Media Events (8 events)
+Network Events (3 events)
+
+🎯 Practice Questions in three levels:
+
+Beginner (5 questions) - Basic event handling concepts
+Intermediate (5 questions) - More complex implementations
+Advanced (5 questions) - Performance and custom events
+Real-world Scenarios (5 questions) - Complete project challenges
+JavaScript Events Reference & Practice Questions
+📋 Complete JavaScript Events List
+Mouse Events
+
+click - Fires when an element is clicked
+dblclick - Fires on double-click
+mousedown - Fires when mouse button is pressed down
+mouseup - Fires when mouse button is released
+mousemove - Fires when mouse moves over an element
+mouseenter - Fires when mouse enters element (no bubbling)
+mouseleave - Fires when mouse leaves element (no bubbling)
+mouseover - Fires when mouse enters element (with bubbling)
+mouseout - Fires when mouse leaves element (with bubbling)
+contextmenu - Fires when right-click menu appears
+wheel - Fires when mouse wheel is scrolled
+
+Keyboard Events
+
+keydown - Fires when key is pressed down
+keyup - Fires when key is released
+keypress (deprecated) - Fires when printable key is pressed
+
+Form Events
+
+submit - Fires when form is submitted
+change - Fires when input value changes (after losing focus)
+input - Fires whenever input value changes (live)
+focus - Fires when element gains focus
+blur - Fires when element loses focus
+focusin - Fires when element is about to gain focus (bubbles)
+focusout - Fires when element is about to lose focus (bubbles)
+reset - Fires when form is reset
+select - Fires when text is selected in input/textarea
+invalid - Fires when form validation fails
+
+Window/Document Events
+
+load - Fires when page is fully loaded
+DOMContentLoaded - Fires when DOM is ready (before images load)
+beforeunload - Fires before page is unloaded
+unload - Fires when page is being unloaded
+resize - Fires when window is resized
+scroll - Fires when scrolling occurs
+hashchange - Fires when URL hash changes
+popstate - Fires when browser history changes
+
+Clipboard Events
+
+copy - Fires when content is copied
+cut - Fires when content is cut
+paste - Fires when content is pasted
+
+Drag & Drop Events
+
+dragstart - Fires when drag operation starts
+drag - Fires continuously while dragging
+dragend - Fires when drag operation ends
+dragenter - Fires when dragged item enters drop zone
+dragover - Fires when item is dragged over drop zone
+dragleave - Fires when dragged item leaves drop zone
+drop - Fires when item is dropped
+
+Touch Events (Mobile)
+
+touchstart - Fires when touch starts
+touchmove - Fires when touch moves
+touchend - Fires when touch ends
+touchcancel - Fires when touch is cancelled
+
+Media Events
+
+play - Fires when media starts playing
+pause - Fires when media is paused
+ended - Fires when media playback ends
+volumechange - Fires when volume changes
+loadstart - Fires when loading starts
+loadeddata - Fires when media data is loaded
+canplay - Fires when media can start playing
+canplaythrough - Fires when media can play through without buffering
+
+Network Events
+
+online - Fires when browser goes online
+offline - Fires when browser goes offline
+error - Fires when an error occurs
+
+
+🎯 Practice Questions
+Beginner Level Questions
+
+What's the difference between click and dblclick events?
+
+Write code to handle both events on the same button
+
+
+Explain mouseenter vs mouseover. When would you use each?
+
+Create examples showing the difference in event bubbling
+
+
+What happens if you don't use event.preventDefault() on a form submit?
+
+Write a form that validates input before submitting
+
+
+How do you detect when a user types in an input field in real-time?
+
+Create a live search feature
+
+
+What's the difference between focus and focusin events?
+
+Demonstrate with nested elements
+
+
+
+Intermediate Level Questions
+
+Create a drag-and-drop interface where users can:
+
+Drag items from one container to another
+Provide visual feedback during dragging
+Handle drop validation
+
+
+Build a keyboard shortcut system that:
+
+Listens for Ctrl+S to save
+Listens for Ctrl+Z to undo
+Prevents default browser behavior
+
+
+Implement an infinite scroll feature:
+
+Load more content when user scrolls near bottom
+Handle scroll performance optimization
+
+
+Create a context menu that:
+
+Appears on right-click
+Disappears when clicking elsewhere
+Has different options based on clicked element
+
+
+Build a copy-to-clipboard feature that:
+
+Copies text when button is clicked
+Shows confirmation message
+Handles clipboard API permissions
+
+
+
+Advanced Level Questions
+
+Event Delegation Challenge:
+
+Create a todo list where new items are added dynamically
+Use event delegation to handle clicks on delete buttons
+Explain why direct event listeners won't work
+
+
+Touch vs Mouse Events:
+
+Build a drawing app that works on both desktop and mobile
+Handle both mouse and touch events
+Prevent default behaviors appropriately
+
+
+Performance Optimization:
+
+Implement scroll event throttling/debouncing
+Create a solution that handles resize events efficiently
+Explain when to use passive event listeners
+
+
+Custom Event System:
+
+Create custom events for a shopping cart
+Implement event listeners for 'itemAdded', 'itemRemoved'
+Use dispatchEvent() to trigger custom events
+
+
+Cross-browser Event Handling:
+
+Write a utility function that handles browser differences
+Support both modern and legacy event methods
+Handle edge cases for older browsers
+
+
+
+Real-world Scenarios
+
+Build a Modal Dialog System:
+
+Opens with click events
+Closes with Escape key or outside click
+Traps focus within modal
+Handles multiple modals
+
+
+Create a File Upload Component:
+
+Handle drag-and-drop file uploads
+Show progress during upload
+Validate file types and sizes
+Handle upload errors
+
+
+Implement a Game Controller:
+
+Use keyboard events for player movement
+Handle key combinations
+Prevent key repeat issues
+Support multiple players
+
+
+Build a Rich Text Editor:
+
+Handle text selection events
+Implement formatting shortcuts
+Handle paste events with cleaning
+Support undo/redo functionality
+
+
+Create a Data Visualization Dashboard:
+
+Handle mouse events for tooltips
+Implement zoom and pan with wheel events
+Handle window resize for responsive charts
+Use intersection observer for lazy loading
+
+
+
+
+💡 Quick Tips for Event Handling
+
+Always check if event object exists before using it
+Use event delegation for dynamically added elements
+Remove event listeners when elements are destroyed
+Use once: true option for one-time events
+Consider performance with high-frequency events (scroll, mousemove)
+Handle accessibility with keyboard navigation
+Test on different devices for touch events
+Use preventDefault() carefully - understand what it blocks

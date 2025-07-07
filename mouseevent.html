@@ -1,0 +1,184 @@
+<!--Mouse Events (11 events)
+click - Fires when an element is clicked
+dblclick - Fires on double-click
+mousedown - Fires when mouse button is pressed down
+mouseup - Fires when mouse button is released
+mousemove - Fires when mouse moves over an element
+mouseenter - Fires when mouse enters element (no bubbling)
+mouseleave - Fires when mouse leaves element (no bubbling)
+mouseover - Fires when mouse enters element (with bubbling)
+mouseout - Fires when mouse leaves element (with bubbling)
+contextmenu - Fires when right-click menu appears
+wheel - Fires when mouse wheel is scrolled
+-->
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+</head>
+<style>
+  body {
+    margin: 0;
+    padding: 20px;
+    background: #ecf0f1;
+    color: #2c3e50;
+    font: 16px 'Arial', sans-serif;
+  }
+
+  h1 {
+    color: #3498db;
+    font-size: 2em;
+  }
+
+  h2 {
+    color: #2ecc71;
+    font-size: 1.5em;
+  }
+
+  p,
+  a,
+  button,
+  input,
+  textarea {
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+  }
+
+  a {
+    color: #3498db;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #2ecc71;
+    text-decoration: underline;
+  }
+
+  button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #2ecc71;
+  }
+
+  input,
+  textarea {
+    border: 1px solid #2c3e50;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+</style>
+
+<body>
+
+  <!-- click events-->
+  <div class="clickevent">
+
+    <h1 class="clickeventtitle">this is the title for the click event</h1>
+    <button class="btw"> click</button>
+  </div>
+
+
+  <script>
+    let body = document.querySelector('body')
+    /*------------------------------------------------------------------------------------------------------------------*/
+    // single click  event
+    let btw = document.querySelector('.btw')
+    body.append(btw)
+    btw = addEventListener('click', () => {
+      console.log('click - Fires when an element is clicked');
+    })
+    /*------------------------------------------------------------------------------------------------------------------*/
+    let btw2 = document.createElement('button')
+    btw2.innerText = " double click"
+    btw2.style.margin = '5px'
+    body.append(btw2)
+    btw2.addEventListener("dblclick", () => {
+      console.log('dblclick - Fires on double-click');
+    })
+    /*------------------------------------------------------------------------------------------------------------------*/
+
+    let btw3 = document.createElement('button')
+    btw3.innerText = "wheel"
+    btw3.style.margin = '5px'
+    body.append(btw3)
+    btw3.addEventListener("mousedown", () => {
+      console.log("mousedown event triggered");
+    });
+
+    btw3.addEventListener("mouseup", () => {
+      console.log("mouseup event triggered");
+    });
+    /*------------------------------------------------------------------------------------------------------------------*/
+    let btw4 = document.createElement('button')
+    btw4.innerText = "mouse move  event"
+    btw4.style.margin = '5px'
+    body.append(btw4)
+    btw4.addEventListener("mousemove", () => {
+      console.log('mousemove - Fires when mouse moves over an element');
+    });
+    /*------------------------------------------------------------------------------------------------------------------*/
+
+    let btw5 = document.createElement('button')
+    btw5.innerText = "mouse enter no bubbling"
+    btw5.style.margin = '5px'
+    body.append(btw5)
+    btw5.addEventListener("mouseenter", () => {
+      console.log('mouseenter - Fires when mouse enters element (no bubbling)');
+    });
+    /*------------------------------------------------------------------------------------------------------------------*/
+    let btw6 = document.createElement('button')
+    btw6.innerText = "mouse leave no bubbling"
+    btw6.style.margin = '5px'
+    body.append(btw6)
+    btw6.addEventListener("mouseleave", () => {
+      console.log('mouseleave - Fires when mouse leaves element (no bubbling)');
+    });
+    /*------------------------------------------------------------------------------------------------------------------*/
+    let btw7 = document.createElement('button')
+    btw7.innerText = "wheel"
+    btw7.style.margin = '5px'
+    body.append(btw7)
+    btw7.addEventListener("wheel", () => {
+      console.log('wheel - Fires when mouse wheel is scrolled');
+    });
+    /*------------------------------------------------------------------------------------------------------------------*/
+    let btw8 = document.createElement('button')
+    btw8.innerText = "contextmenu"
+    btw8.style.margin = '5px'
+    body.append(btw8)
+
+    btw8.addEventListener('contextmenu', (e) => {
+      e.preventDefault(); // Optional: to prevent the default right-click menu
+      console.log('Right-click detected!');
+    });
+
+    /*------------------------------------------------------------------------------------------------------------------*/
+    let btw9 = document.createElement('button')
+    btw9.innerText = "mouseout"
+    btw9.style.margin = '5px'
+    body.append(btw9)
+    btw9.addEventListener('mouseout', () => {
+      console.log('Pointer has moved out!');
+    });
+    /*---------------------------------------------------------------------------------------------*/
+
+
+
+  </script>
+</body>
+
+</html>
