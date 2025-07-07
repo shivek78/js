@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--Keyboard Events
+
+keydown - Fires when key is pressed down
+keyup - Fires when key is released
+keypress (deprecated) - Fires when printable key is pressed
+-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>key events</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1 class="title-">key event learing</h1>
+  <input type="text" class="name" placeholder="Enter Name">
+
+
+
+  <script>
+    
+    let inputbox = document.querySelector('.name')
+    inputbox.style.border = "solid 0.2pc"
+
+    inputbox.addEventListener('keyup', () => {
+      console.log(inputbox.value);
+    })
+
+
+    inputbox.addEventListener('keypress', () => {
+      console.log(inputbox.value);
+    })
+
+    inputbox.addEventListener('keydown', () => {
+      console.log(inputbox.value);
+    })
+
+  </script>
+</body>
+
+</html>
