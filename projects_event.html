@@ -1,0 +1,130 @@
+<!--🖱️💻 Interactive Form Playground – Mini Web App Project
+🎯 Project Title: "Event-Driven Form Fun"
+🧠 Objective:
+To understand and demonstrate the use of mouse events, keyboard events, and form events using HTML, CSS, and JavaScript.
+
+🔧 Tools Required:
+A browser (Chrome, Firefox, etc.)
+
+Text editor (VS Code, Sublime, etc.)
+
+Basic knowledge of HTML, CSS, and JavaScript
+
+🎨 Features to Include:
+html
+
+1. Form with Multiple Inputs
+Text inputs: Name, Email
+
+Radio buttons: Gender
+
+Dropdown: Country selection
+
+Submit and Reset buttons
+--->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>form Projects</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <h1 class="title">Event-Driven Form Fun</h1>
+  <form>
+    <label> Full Name<input type="text" class="name" placeholder="Enetr Name"></label>
+    <label> Email<input type="email" class="email" placeholder="Enter Email"></label>
+
+    <h3 class="gender">Select Gender:</h3>
+    <label>
+      <input type="radio" name="gender" value="male" class="male"> Male
+    </label><br>
+    <label>
+      <input type="radio" name="gender" value="female" class="female"> Female
+    </label><br>
+    <label>
+      <input type="radio" name="gender" value="other" class="other"> Other
+    </label>
+    <h3 class="selectcountry">Select Country</h3>
+    <select name="Country" class="country">
+
+      <option value="">--Select Country--</option>
+      <option value="india">India</option>
+      <option value="usa">United States</option>
+      <option value="uk">United Kingdom</option>
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+    </select>
+    <button class="submit" type="submit"> submit</button>
+    <button class="reset">Reset</button>
+
+
+
+
+  </form>
+  
+<script>
+    const form = document.querySelector('form');
+    const nameInput = document.querySelector('.name');
+    const emailInput = document.querySelector('.email');
+    const countrySelect = document.querySelector('.country');
+    const submitButton = document.querySelector('.submit');
+
+    // Focus and blur effects
+    [nameInput, emailInput].forEach(input => {
+      input.addEventListener('focus', () => {
+        input.style.background = 'rgba(10,30,50,0.1)';
+      });
+      input.addEventListener('blur', () => {
+        input.style.background = '';
+      });
+    });
+
+    // Log name and email on change
+    nameInput.addEventListener('change', () => console.log('Name:', nameInput.value));
+    emailInput.addEventListener('change', () => console.log('Email:', emailInput.value));
+
+    // Submit event
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = nameInput.value;
+      const email = emailInput.value;
+      const gender = document.querySelector('input[name="gender"]:checked')?.value || 'Not selected';
+      const country = countrySelect.value || 'Not selected';
+
+      console.log("Name:", name);
+      console.log("Email:", email);
+      console.log("Gender:", gender);
+      console.log("Country:", country);
+
+      alert(`Thanks, ${name}! We received your details.`);
+    });
+
+    // Reset event
+    form.addEventListener('reset', () => {
+      alert("Form has been reset.");
+    });
+
+    // Optional: Mouse event on submit button
+    submitButton.addEventListener('mouseover', () => {
+      submitButton.style.backgroundColor = '#ddd';
+    });
+
+    submitButton.addEventListener('mouseout', () => {
+      submitButton.style.backgroundColor = '';
+    });
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html><!--Form Events
+
+submit - Fires when form is submitted
+change - Fires when input value changes (after losing focus)
+input - Fires whenever input value changes (live)
+focus - Fires when element gains focus
+blur - Fires when element loses focus
+focusin - Fires when element is about to gain focus (bubbles)
+focusout - Fires when element is about to lose focus (bubbles)
+reset - Fires when form is reset
+select - Fires when text is selected in input/textarea
+invalid - Fires when form validation fails-->
+
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>form Event</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+   <h1 class="title"> we learing the form events</h1>
+   <input type="text" class="names" placeholder="Name">
+<input type="password" class="password" placeholder="Password">
+<button class="submit">Submit</button>
+
+<p class="para"></p>
+
+   <script>
+  // Selecting DOM elements
+  const para = document.querySelector('p');
+  const name = document.querySelector('.names');
+  const password = document.querySelector('.password');
+  const submit = document.querySelector('.submit');
+  const body = document.querySelector('body');
+
+  // Fires whenever user types into the input
+  name.addEventListener('input', (e) => {
+    console.log(e.target.value);
+    para.innerText = e.target.value;
+  });
+
+  // Fires when the user finishes input and clicks elsewhere
+  name.addEventListener('change', (e) => {
+    console.log('Changed to:', e.target.value);
+    para.innerText = e.target.value;
+  });
+
+  // When the input field is focused
+  name.addEventListener('focus', () => {
+    name.style.background = "rgba(10, 20, 50, 0.1)";
+  });
+
+  // When the input field loses focus
+  name.addEventListener('blur', () => {
+    name.style.background = ""; // Reset or choose another style
+  });
+
+  
+  // You could add password or submit logic here!
+  submit.addEventListener('click', () => {
+    console.log('Submitted!');
+    console.log('Username:', name.value);
+    console.log('Password:', password.value);
+  });
+</script>
+   </body>
+</html>
+

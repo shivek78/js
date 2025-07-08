@@ -1,0 +1,134 @@
+ Step-by-Step Guide: Interactive To-Do List
+✅ 1. Setup Basic Structure:
+Create an HTML page with:
+
+A heading (e.g., “My To-Do List”)
+
+A simple form with an input field and a submit button
+
+An empty <ul> for the task list
+
+
+✅ 2. Capture Form Submission (Form Event):
+Use JavaScript to listen for the submit event.
+
+Prevent the default form behavior (so the page doesn’t reload).
+
+Get the text entered in the input field.
+
+✅ 3. Add Task to the List (DOM Manipulation):
+Create a new <li> element when the user submits a task.
+
+Add the task text inside this <li>.
+
+Append the <li> to the <ul>.
+
+✅ 4. Print All Tasks to Console:
+Create an array to store all tasks.
+
+Every time the user submits a task, push it into the array.
+
+After adding, use console.log to print the entire array of tasks.
+
+✅ 5. Handle Mouse Events:
+Add a double-click event on each <li> to toggle the completed state (add/remove a class).
+
+Optional: Add a right-click event to delete the task.
+
+✅ 6. Handle Keyboard Event:
+Add a keydown event on the document to:
+
+Focus the input field when the user presses a specific key (like A or Enter).
+
+✅ 7. (Optional) Polish with CSS:
+Add hover effects on the list items using mouseover and mouseout events (or CSS).
+
+👉 Key Events You’ll Practice:
+
+Event Type	Example Use Case
+submit	Adding new task via form
+dblclick	Marking task as complete/incomplete
+click	Deleting task (or right-click alternative)
+keydown	Keyboard shortcut for focus
+mouseover	Changing style on hover
+
+Would you like a checklist template to help you keep track while building it?
+
+
+
+
+
+
+
+
+You said:
+ no to do lidt it form
+
+
+ChatGPT said:
+Thank you—that clears it up! You want to build a form-based mini project to practice form events, mouse events, and keyboard events, not a to-do list.
+
+Here’s a fresh project idea based on forms that uses all three types of events:
+
+📝 Project Idea: User Registration Form with Interactive Features
+📄 Project Description:
+Create a User Registration Form where users can enter:
+
+Name
+
+Email
+
+Password
+
+Confirm Password
+
+When the user clicks Submit:
+✅ Display all the entered data in the console (this is your main practice target).
+✅ Validate that the password and confirm password match (using a form event).
+✅ If the user double-clicks the submit button, show an alert saying “Double-click detected!” (using a mouse event).
+✅ Add a keyboard shortcut: When the user presses Enter anywhere, automatically submit the form and print the data (keyboard event).
+
+🔑 Key Events You’ll Use:
+Event	Where to Use
+submit (Form)	Validate inputs & print data to console
+click (Mouse)	Show message on submit click
+dblclick (Mouse)	Optional: Alert on double-click submit
+keydown (Keyboard)	Auto-submit form when pressing Enter
+
+🏗 Steps to Build:
+HTML: Create a simple form with Name, Email, Password, Confirm Password fields + Submit button.
+
+Form Event:
+
+On submit → Prevent default, collect data, print to console.
+
+Mouse Event:
+
+On click → Show “Form submitted!” message.
+
+On double-click → Show alert.
+
+Keyboard Event:
+
+On keydown → If Enter key pressed, trigger form submit.
+
+👉 Would you like me to give you a simple checklist for each step so you can build it on your own?
+
+
+
+
+
+
+
+
+Unlock more with Plus
+ChatGPT Plus gives you higher limits, smarter models, and Sora for video.
+
+Get Plus
+
+
+
+
+Tools
+
+

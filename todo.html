@@ -1,0 +1,101 @@
+<!--Step-by-Step Guide: Interactive To-Do List
+✅ 1. Setup Basic Structure:
+Create an HTML page with:
+
+A heading (e.g., “My To-Do List”)
+
+A simple form with an input field and a submit button
+
+An empty <ul> for the task list
+
+✅ 2. Capture Form Submission (Form Event):
+Use JavaScript to listen for the submit event.
+
+Prevent the default form behavior (so the page doesn’t reload).
+
+Get the text entered in the input field.
+
+✅ 3. Add Task to the List (DOM Manipulation):
+Create a new <li> element when the user submits a task.
+
+Add the task text inside this <li>.
+
+Append the <li> to the <ul>.
+
+✅ 4. Print All Tasks to Console:
+Create an array to store all tasks.
+
+Every time the user submits a task, push it into the array.
+
+After adding, use console.log to print the entire array of tasks.
+
+✅ 5. Handle Mouse Events:
+Add a double-click event on each <li> to toggle the completed state (add/remove a class).
+
+Optional: Add a right-click event to delete the task.
+
+✅ 6. Handle Keyboard Event:
+Add a keydown event on the document to:
+
+Focus the input field when the user presses a specific key (like A or Enter).-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> to do List</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1 class="title">My To-Do List</h1>
+
+  <form>
+    <label> <input type="text" class="inputlist1" placeholder=" Enter Your Schedule"></label>
+    <button type="submit" name="submit" class=" submit">submit</button>
+ <button type="" name="reset" class=" reset">Reset</button>
+
+  </form>
+<h2>List of you Task</h2>
+ <ul id="tasklist"></ul>
+
+
+
+  <script>
+let form = document.querySelector('form');
+let inputlist = document.querySelector('.inputlist1');
+let taskList = document.querySelector('#tasklist');
+let reset = document.querySelector('.reset');
+// events
+let inputtask = '';
+
+inputlist.addEventListener('change', () => {
+  inputtask = inputlist.value;
+});
+
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  let list = document.createElement('li');
+  list.innerText = inputtask;
+  taskList.append(list);
+
+list.addEventListener("dblclick",()=>{
+list.remove()
+})
+reset.addEventListener('click',(e)=>{
+  e.preventDefault();
+  inputlist.value='';
+})
+
+});
+
+  </script>
+</body>
+
+</html>
