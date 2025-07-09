@@ -1,122 +1,108 @@
+:root {
+  --primary-color: #6c63ff;
+  --accent-color: #00c9a7;
+  --danger-color: #ff4d6d;
+  --bg-gradient: linear-gradient(135deg, #e0f7fa, #e1bee7);
+  --text-color: #2c3e50;
+  --font-stack: 'Segoe UI', 'Arial', sans-serif;
+}
+
+/* Base */
 body {
   margin: 0;
-  padding: 20px;
-  background: #ecf0f1;
-  color: #2c3e50;
-  font: 16px 'Arial', sans-serif;
+  padding: 40px;
+  background: var(--bg-gradient);
+  font-family: var(--font-stack);
+  color: var(--text-color);
 }
 
-h1 {
-  color: #3498db;
-  font-size: 2em;
+/* Headings */
+h1, h2, .title {
+  text-align: center;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
-h2 {
-  color: #2ecc71;
-  font-size: 1.5em;
+/* Form Container */
+form ,div {
+  max-width: 550px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.7s ease-in;
+  margin: 20px;
 }
 
-p, a, button, input, textarea {
-  font-size: 16px;
-  font-family: 'Arial', sans-serif;
-}
-
-a {
-  color: #3498db;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #2ecc71;
-  text-decoration: underline;
-}
-
-button {
-  background: #3498db;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-button .submit{background: #2ecc71;}
-
-button:hover {
-  background: #2ecc71;
-}
-
-input, textarea {
-  border: 1px solid #2c3e50;
-  padding: 10px;
-  width: 100%;
-  box-sizing: border-box;
-}
-form {
-  max-width: 600px;
-  margin: 10px auto;
-  padding: 10px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
-}
-
-/* Input Fields */
+/* Inputs, Textarea, Select */
 input[type="text"],
 input[type="email"],
 input[type="password"],
-textarea,
-select {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-  box-sizing: border-box;
+select,
+textarea {
+  width: 90%;
+  padding: 11px;
+  margin: 3px;
+  margin-top: 2px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
-/* Focus Effect */
 input:focus,
 textarea:focus,
 select:focus {
-  border-color: #007bff;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
   outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  background-color: #f9f9ff;
 }
 
 /* Labels */
 label {
-  font-weight: bold;
-  margin-bottom: 3px;
   display: block;
-  color: #242323;
+  margin-bottom: 6px;
+  font-weight: bold;
 }
 
 /* Buttons */
 button,
 input[type="submit"] {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 15px;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 12px 22px;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: background 0.3s ease;
 }
 
 button:hover,
 input[type="submit"]:hover {
-  background-color: #0056b3;
+  background: var(--accent-color);
+}
+
+button.reset {
+  background: var(--danger-color);
+}
+
+button.reset:hover {
+  background: #d7385e;
 }
 
 /* Textarea */
 textarea {
   resize: vertical;
-  min-height: 80px;
+  min-height: 100px;
 }
 
-/* Optional: Add some spacing between form elements */
-.form-group {
-  margin-bottom: 15px;
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }

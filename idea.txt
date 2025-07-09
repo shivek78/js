@@ -61,15 +61,6 @@ Would you like a checklist template to help you keep track while building it?
 
 
 
-You said:
- no to do lidt it form
-
-
-ChatGPT said:
-Thank you—that clears it up! You want to build a form-based mini project to practice form events, mouse events, and keyboard events, not a to-do list.
-
-Here’s a fresh project idea based on forms that uses all three types of events:
-
 📝 Project Idea: User Registration Form with Interactive Features
 📄 Project Description:
 Create a User Registration Form where users can enter:
@@ -112,23 +103,5 @@ Keyboard Event:
 
 On keydown → If Enter key pressed, trigger form submit.
 
-👉 Would you like me to give you a simple checklist for each step so you can build it on your own?
-
-
-
-
-
-
-
-
-Unlock more with Plus
-ChatGPT Plus gives you higher limits, smarter models, and Sora for video.
-
-Get Plus
-
-
-
-
-Tools
 
 
