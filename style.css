@@ -7,7 +7,9 @@
   --font-stack: 'Segoe UI', 'Arial', sans-serif;
 }
 
-/* Base */
+/* ===========================
+   Base Styles
+=========================== */
 body {
   margin: 0;
   padding: 40px;
@@ -16,27 +18,35 @@ body {
   color: var(--text-color);
 }
 
-/* Headings */
-h1, h2, .title {
+/* ===========================
+   Headings
+=========================== */
+h1,
+h2,
+.title {
   text-align: center;
   color: var(--primary-color);
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-/* Form Container */
-form ,div {
+/* ===========================
+   Form & Containers
+=========================== */
+form,
+div {
   max-width: 550px;
-  margin: 0 auto;
+  margin: 20px auto;
   background: #fff;
   padding: 40px 30px;
   border-radius: 16px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   animation: fadeIn 0.7s ease-in;
-  margin: 20px;
 }
 
-/* Inputs, Textarea, Select */
+/* ===========================
+   Inputs, Selects, Textareas
+=========================== */
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -44,8 +54,7 @@ select,
 textarea {
   width: 90%;
   padding: 11px;
-  margin: 3px;
-  margin-top: 2px;
+  margin: 3px 0;
   border: 2px solid var(--primary-color);
   border-radius: 5px;
   font-size: 16px;
@@ -61,14 +70,18 @@ select:focus {
   background-color: #f9f9ff;
 }
 
-/* Labels */
+/* ===========================
+   Labels
+=========================== */
 label {
   display: block;
   margin-bottom: 6px;
   font-weight: bold;
 }
 
-/* Buttons */
+/* ===========================
+   Buttons
+=========================== */
 button,
 input[type="submit"] {
   background: var(--primary-color);
@@ -78,7 +91,7 @@ input[type="submit"] {
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
-  margin-right: 10px;
+  margin: 10px;
   transition: background 0.3s ease;
 }
 
@@ -87,6 +100,7 @@ input[type="submit"]:hover {
   background: var(--accent-color);
 }
 
+/* Reset Button */
 button.reset {
   background: var(--danger-color);
 }
@@ -95,17 +109,32 @@ button.reset:hover {
   background: #d7385e;
 }
 
-/* Textarea */
+/* ===========================
+   Textarea
+=========================== */
 textarea {
   resize: vertical;
   min-height: 100px;
 }
 
-/* Fade-in Animation */
+/* ===========================
+   Animation
+=========================== */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+/* ===========================
+   Image Container
+=========================== */
 .dove-container {
   width: 300px;
   padding: 10px;
@@ -113,6 +142,7 @@ textarea {
   text-align: center;
 }
 
+/* Responsive Image */
 img {
   max-width: 100%;
   height: auto;
