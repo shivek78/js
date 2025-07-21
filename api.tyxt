@@ -1,0 +1,102 @@
+📘 JavaScript API Topics List
+🟢 1. API Basics
+What is an API?
+
+Types of APIs (REST, SOAP, GraphQL)
+
+What is a REST API?
+
+HTTP Methods:
+
+GET, POST, PUT, DELETE, PATCH
+
+Status Codes:
+
+200, 201, 400, 401, 403, 404, 500
+
+🟡 2. Fetch API
+What is fetch()?
+
+Making a GET request
+
+Making a POST request
+
+Handling JSON response
+
+.then() and .catch() chaining
+
+Using headers in fetch
+
+Sending data with fetch()
+
+🟠 3. Promises
+What is a Promise?
+
+States of Promise: pending, fulfilled, rejected
+
+resolve() and reject()
+
+.then(), .catch(), .finally()
+
+Promise chaining
+
+Promise vs Callback
+
+🔵 4. Async/Await
+Using async functions
+
+await with fetch()
+
+Error handling using try...catch
+
+Async/Await vs Promises
+
+🟣 5. Working with Real APIs
+OpenWeather API
+
+GitHub API
+
+JSONPlaceholder (fake API for practice)
+
+REST Countries API
+
+Movie/Book search APIs
+
+Currency converter API
+
+🔴 6. Advanced API Topics
+Sending Auth tokens (JWT, Bearer)
+
+CORS (Cross-Origin Resource Sharing)
+
+Handling API errors and status codes
+
+Debouncing API calls (in search boxes)
+
+Retry failed requests
+
+Pagination (loading data in chunks)
+
+🟤 7. Axios (Alternative to Fetch)
+Installing Axios via CDN or npm
+
+Axios GET, POST, PUT, DELETE
+
+Axios vs Fetch comparison
+
+Interceptors
+
+Global error handling
+
+⚫ 8. Bonus / Practice Projects
+Weather App using OpenWeatherMap API
+
+GitHub Profile Viewer using GitHub API
+
+News App using NewsAPI
+
+Currency Converter using ExchangeRate API
+
+To-do app using JSONPlaceholder
+
+Movie search using OMDB API
