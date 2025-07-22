@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div>
+<h2>🔗 Advanced Promise Methods</h2>
+<p>These methods help you handle multiple promises or control asynchronous flow more effectively:</p>
+
+<table border="1" cellspacing="0" cellpadding="8">
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Promise.all()</code></td>
+      <td>Waits for all promises to fulfill; rejects if any fail.</td>
+    </tr>
+    <tr>
+      <td><code>Promise.allSettled()</code></td>
+      <td>Waits for all to settle (fulfilled or rejected); returns all results.</td>
+    </tr>
+    <tr>
+      <td><code>Promise.race()</code></td>
+      <td>Resolves/rejects as soon as the first promise settles.</td>
+    </tr>
+    <tr>
+      <td><code>Promise.any()</code></td>
+      <td>Resolves with the first fulfilled promise; rejects only if all fail.</td>
+    </tr>
+    <tr>
+      <td><code>Promise.resolve()</code></td>
+      <td>Returns a promise that is already fulfilled with a given value.</td>
+    </tr>
+    <tr>
+      <td><code>Promise.reject()</code></td>
+      <td>Returns a promise that is already rejected with a given reason.</td>
+    </tr>
+    <tr>
+      <td><code>Promise.finally()</code></td>
+      <td>Executes a callback regardless of fulfillment or rejection.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div>
+ <h1>Await Keyword in JavaScript</h1>
+
+<p>The <code><b>await</b></code> keyword is used to pause execution inside an <code>async</code> function until a Promise is settled.<br>
+   It makes asynchronous code look and behave like synchronous code, improving readability and flow.</p>
+
+<h2>📋 await Usage Summary</h2>
+
+<table border="1" cellspacing="0" cellpadding="8">
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>await promise</code></td>
+      <td>Pauses execution until the promise is fulfilled or rejected.</td>
+    </tr>
+    <tr>
+      <td><code>await non-promise</code></td>
+      <td>Wraps the value in a resolved promise and waits for it.</td>
+    </tr>
+    <tr>
+      <td><code>await Promise.reject()</code></td>
+      <td>Throws the rejection reason as an error.</td>
+    </tr>
+    <tr>
+      <td><code>await Promise.resolve()</code></td>
+      <td>Returns the resolved value directly.</td>
+    </tr>
+    <tr>
+      <td><code>await Promise.all()</code></td>
+      <td>Waits for all promises to resolve; throws if any reject.</td>
+    </tr>
+    <tr>
+      <td><code>await Promise.race()</code></td>
+      <td>Waits for the first promise to settle (resolve or reject).</td>
+    </tr>
+    <tr>
+      <td><code>await Promise.any()</code></td>
+      <td>Waits for the first fulfilled promise; throws if all reject.</td>
+    </tr>
+    <tr>
+      <td><code>await Promise.allSettled()</code></td>
+      <td>Waits for all promises to settle and returns their results.</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+<div>
+  <h2>📋 async Usage Summary</h2>
+
+<table border="1" cellspacing="0" cellpadding="8">
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>async function</code></td>
+      <td>Declares a function that returns a Promise.</td>
+    </tr>
+    <tr>
+      <td><code>async () => {}</code></td>
+      <td>Arrow function syntax for async functions.</td>
+    </tr>
+    <tr>
+      <td><code>return value</code></td>
+      <td>Automatically wrapped in <code>Promise.resolve(value)</code>.</td>
+    </tr>
+    <tr>
+      <td><code>throw error</code></td>
+      <td>Automatically wrapped in <code>Promise.reject(error)</code>.</td>
+    </tr>
+    <tr>
+      <td><code>await inside async</code></td>
+      <td>Pauses execution until the awaited Promise settles.</td>
+    </tr>
+    <tr>
+      <td><code>try...catch</code></td>
+      <td>Used for error handling inside async functions.</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+</body>
+
+</html>
