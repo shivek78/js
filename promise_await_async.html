@@ -152,7 +152,29 @@
 <script>
   //promise
   //they have three steatus  rsolve /fullille/ reject
-  
+let a=20;
+let b=30;
+const sum=a+b;
+  let firstpromise= new Promise((resolve,reject)=>{
+    console.log("shivek");//this is simple print because its is synchonous code
+    //resolve(sum)
+    reject(new Error('internal server error'));
+  });
+  setTimeout(function(){
+    console.log('shivek is my name ');
+
+  },1000)
+
+  //  asyncomus funtion
+  let secondpromise= new Promise((resolve,reject)=>{
+setTimeout(function(){
+    console.log('shivek is my name ');
+
+  },15000)
+
+  });
+  //
+
 
 
 
