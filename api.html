@@ -17,6 +17,15 @@ clint request  the api-> api intract with server-> and agin tha clinet  get repo
          </p>
 ///
 
-        <script src="" async defer></script>
+        <script>
+           //LETS FACTHEING DATA FROM API
+async function facthdata() {
+    let response= await fetch('https://jsonplaceholder.typicode.com/posts')
+    console.log( await response.json());
+
+}
+facthdata()
+
+        </script>
     </body>
 </html>
