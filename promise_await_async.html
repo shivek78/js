@@ -174,13 +174,23 @@ setTimeout(function(){
 
   });
   //
+// asynchronous programing
+setTimeout(()=>{
+  console.log("hello i print this after 7s but i didn't bloock the code")
+},7000);
 
-
-
-
-
-
-
+setTimeout(()=>{
+  console.log("hello i print this after 5s but i didn't bloock the code")
+},5000);
+setTimeout(()=>{
+  console.log("hello i print this after 3s but i didn't bloock the code")
+},3000);
+// synchonous task run line by line  and  asynconus does not block the code a
+console.log("sunchonous function1 i am the type sunchorus in nature by default1")
+console.log("sunchonous function1 i am the type sunchorus in nature by default2")
+console.log("sunchonous function1 i am the type sunchorus in nature by default3")
+console.log("sunchonous function1 i am the type sunchorus in nature by default4")
+console.log("sunchonous function1 i am the type sunchorus in nature by default5")
 
 
 
