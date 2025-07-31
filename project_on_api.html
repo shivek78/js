@@ -59,7 +59,7 @@
             border: none;
         }
 
-        .add-btn {
+        .addbtn {
             padding: 0 15px;
             border-radius: 10px;
             background-color: green;
@@ -108,7 +108,7 @@
             <h1>Save your task here...</h1>
             <div class="input-container">
                 <input id="task-input" type="text" placeholder="Enter your task">
-                <button class="add-btn">Add</button>
+                <button class="addbtn">Add</button>
             </div>
         </header>
 
@@ -135,6 +135,14 @@
 
     <script>
         // You can add your JavaScript here for adding, editing, and deleting tasks
+        let taskinput=document.querySelector('#task-input');
+        let add_btn =document.querySelector('.addbtn');
+        add_btn.addEventListener('click',function(){
+           let value= taskinput.value;
+          console.log(value);
+        })
+
+
         ///
     </script>
 </body>
