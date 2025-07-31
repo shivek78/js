@@ -13,7 +13,8 @@
             box-sizing: border-box;
         }
 
-        html, body {
+        html,
+        body {
             width: 100%;
             height: 100%;
             background-color: black;
@@ -113,37 +114,59 @@
         </header>
 
 
-         <div class="todo-container">
+        <div class="todo-container">
             <div class="todo">
                 <p>This is the first task</p>
                 <div>
                     <button class="edit-btn">Edit</button>
                     <button class="delete-btn">Delete</button>
                 </div>
-                </div> <div class="todo-container">
-            <div class="todo">
-                <p>This is the first task</p>
-                <div>
-                    <button class="edit-btn">Edit</button>
-                    <button class="delete-btn">Delete</button>
-                </div>
+            </div>
+            <div class="todo-container">
+                <div class="todo">
+                    <p>This is the first task</p>
+                    <div>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </div>
                 </div>
 
             </div>
         </div>
     </div>
-
     <script>
-        // You can add your JavaScript here for adding, editing, and deleting tasks
-        let taskinput=document.querySelector('#task-input');
-        let add_btn =document.querySelector('.addbtn');
-        add_btn.addEventListener('click',function(){
-           let value= taskinput.value;
-          console.log(value);
-        })
+        // Select DOM elements
+        let taskInput = document.querySelector('#task-input');
+        let addBtn = document.querySelector('.addbtn');
+        let todo_container=document.querySelector('.todo-container')
+
+        // Your API endpoint
+        let api = "https://688a27e14c55d5c739553eb3.mockapi.io/v1/todo";
+
+        // Add task (currently just logs it)
+        addBtn.addEventListener('click', function () {
+            let value = taskInput.value;
+            console.log(value);
+        });
 
 
-        ///
+        async function fetchData() {
+
+            let response = await fetch(api);
+            let data = await response.json();
+            console.log(data);
+            console.log("Hello, I run after the API data");
+
+            data.forEach(obj => {
+               todo_container.append('hrloo')
+            });
+
+
+        }
+
+
+        // Call the function
+        fetchData();
     </script>
 </body>
 
