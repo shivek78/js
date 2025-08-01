@@ -115,70 +115,80 @@
 
 
         <div class="todo-container">
-            <div class="todo">
+           <!---<div class="todo">
                 <p>This is the first task</p>
                 <div>
                     <button class="edit-btn">Edit</button>
                     <button class="delete-btn">Delete</button>
                 </div>
-            </div>
-            <div class="todo-container">
-                <div class="todo">
-                    <p>This is the first task</p>
-                    <div>
-                        <button class="edit-btn">Edit</button>
-                        <button class="delete-btn">Delete</button>
-                    </div>
-                </div>
 
-            </div>
         </div>
+         -->
     </div>
     <script>
         // Select DOM elements
-        let taskInput = document.querySelector('#task-input');
-        let addBtn = document.querySelector('.addbtn');
-        let todo_container = document.querySelector('.todo-container')
+            let taskInput = document.querySelector('#task-input');
+            let addBtn = document.querySelector('.addbtn');
+            let todo_container = document.querySelector('.todo-container')
 
-        // Your API endpoint
-        let api = "https://688a27e14c55d5c739553eb3.mockapi.io/v1/todo";
+            // Your API endpoint
+            let api = "https://688a27e14c55d5c739553eb3.mockapi.io/v1/todo";
 
-        // Add task (currently just logs it)
-        addBtn.addEventListener('click', function () {
-            let value = taskInput.value;
-            console.log(value);
-        });
+            // Add task (currently just logs it)
+            addBtn.addEventListener('click', function () {
+                let value = taskInput.value;
+                console.log(value);
+            });
 
 
-        async function fetchData() {
+            async function fetchData() {
 
-            let response = await fetch(api);
-            let data = await response.json();
-            console.log(data);
-            console.log("Hello, I run after the API data");
+                let response = await fetch(api);
+                let data = await response.json();
+                console.log(data);
+                console.log("Hello, I run after the API data");
 
-            data.forEach(obj => {
-                let div = document.createElement('div');
-                div.className = "todo"
-                div.innerHTML = `<p>${obj.text}</p>
+                data.forEach(obj => {
+                    let div = document.createElement('div');
+                    div.className = "todo"
+                    div.innerHTML = `<p>${obj.text}</p>
                 <div>
-                    <button>Delete</button>
-                    <button>Edit</button>`
-                      todo_container.append(div)
+                     <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>`
+
+                    todo_container.append(div)
 
 
 
 
-            });}
-            async function postdata(){
-                let response=await fetch('api')
+                });
+            }
+            async function postdata(text) {
+                let response = await fetch(api, {
+                    method: 'POST',
+                    headers: {
+                        'Content-type': 'application/json',
+                    },
+                    body: JSON.stringify({ text: text })
+                });
+                let data = await response.json();
+                console.log("Posted:", data);
+
+                // Optionally update UI after post
+                let div = document.createElement('div');
+                div.className = "todo";
+                div.innerHTML = `<p>${data.text}</p>
+        <div>
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>`;
+                todo_container.append(div);
             }
 
 
 
 
-        // Call the function
-        fetchData();
+            // Call the function
+            fetchData();
     </script>
 </body>
 
