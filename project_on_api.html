@@ -173,14 +173,6 @@
                 });
                 let data = await response.json();
                 console.log("Posted:", data);
-
-                // Optionally update UI after post
-                let div = document.createElement('div');
-                div.className = "todo";
-                div.innerHTML = `<p>${data.text}</p>
-        <div>
-            <button class="edit-btn">Edit</button>
-            <button class="delete-btn">Delete</button>`;
                 todo_container.append(div);
             }
 
