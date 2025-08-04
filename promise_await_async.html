@@ -205,7 +205,7 @@ Promiseone.then(function(){
 })
 
 
-// 2nd way of writing the promise 
+// 2nd way of writing the promise
 new Promise(function(resolve,reject){
   setTimeout(() => {
     console.log("asyn task two");
@@ -214,7 +214,32 @@ new Promise(function(resolve,reject){
 }).then(function(){
   console.log('promise consume two');
 
-})
+});
+// in this we pass data in promise in resolve
+const promisethree = new Promise(function(resolve, reject) {
+  setTimeout(function() {
+    resolve({ username: "shivek", email: "shivekyadav82@gmail.com" });
+  }, 12000);
+});
+
+promisethree.then(function(user) {
+  console.log(user);
+});
+ const promisefour= new Promise(function(resolve,reject){
+setTimeout(() => {
+  let error =true
+  if(!error){
+    resolve({username:"shivek",password:"90876"})
+  }
+  else{
+    reject('somting goin woring',error)
+
+  }
+}, 13000);
+ }).then((user)=>{
+console.log(user);
+return user.use
+ })
 
 </script>
 </body>
