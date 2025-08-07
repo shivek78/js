@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Prompt Function</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Click to enter your name</h1>
+    <button onclick="show_prompt()">Click</button>
+    <div id="greeting"></div>
+
+    <script>
+        function show_prompt() {
+            let name = prompt('Please enter your name:');
+            if (name !== null && name.trim() !== "") {
+                document.getElementById("greeting").innerHTML = `Hello ${name}! How are you?`;
+            } else {
+                alert('Please enter your name');
+            }
+        }
+    </script>
+</body>
+</html>
