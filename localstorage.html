@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Local & Session Storage Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    input, button {
+      margin: 5px;
+      padding: 10px;
+    }
+    .output {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Local & Session Storage Demo</h1>
+  <p>Enter a name to store it using local or session storage.</p>
+
+  <input type="text" id="nameInput" placeholder="Enter your name">
+  <br>
+
+  <button onclick="setLocal()">Set Local Storage</button>
+  <button onclick="getLocal()">Get Local Storage</button>
+  <button onclick="removeLocal()">Remove Local Storage</button>
+  <br>
+
+  <button onclick="setSession()">Set Session Storage</button>
+  <button onclick="getSession()">Get Session Storage</button>
+  <button onclick="removeSession()">Remove Session Storage</button>
+
+  <div class="output" id="output"></div>
+
+  <script>
+
+
+    function setLocal() {
+      const name = document.getElementById("nameInput").value.trim();
+      if (name) {
+        localStorage.setItem("name", name);
+        document.getElementById("output").textContent = `Local storage set: name = ${name}`;
+      } else {
+        document.getElementById("output").textContent = "Please enter a name.";
+      }
+    }
+
+    function getLocal() {
+      const name = localStorage.getItem("name");
+      document.getElementById("output").textContent = name
+        ? `Local storage value: name = ${name}`
+        : "No local storage value found.";
+    }
+
+    function removeLocal() {
+      localStorage.removeItem("name");
+      document.getElementById("output").textContent = "Local storage 'name' removed.";
+    }
+
+    function setSession() {
+      const name = document.getElementById("nameInput").value.trim();
+      if (name) {
+        sessionStorage.setItem("sessionName", name);
+        document.getElementById("output").textContent = `Session storage set: sessionName = ${name}`;
+      } else {
+        document.getElementById("output").textContent = "Please enter a name.";
+      }
+    }
+
+    function getSession() {
+      const sessionName = sessionStorage.getItem("sessionName");
+      document.getElementById("output").textContent = sessionName
+        ? `Session storage value: sessionName = ${sessionName}`
+        : "No session storage value found.";
+    }
+
+    function removeSession() {
+      sessionStorage.removeItem("sessionName");
+      document.getElementById("output").textContent = "Session storage 'sessionName' removed.";
+    }
+  </script>
+</body>
+</html>
