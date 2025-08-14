@@ -76,7 +76,7 @@
 
     function getSession() {
       const sessionName = sessionStorage.getItem("sessionName");
-      document.getElementById("output").textContent = sessionName
+      document.getE........................lementById("output").textContent = sessionName
         ? `Session storage value: sessionName = ${sessionName}`
         : "No session storage value found.";
     }
