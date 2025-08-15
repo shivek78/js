@@ -1,28 +1,76 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-<h1> The Spread Operator</h1>
-<p>The JavaScript spread operator (...) expands an iterable (like an array) into more elements.</p>
+<head>
+    <meta charset="utf-8">
+    <title>Spread Operator </title>
+<link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border-radius: 8px;
+        }
+        .line {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Spread Operator Demo</h1>
+    <p>This demo shows how the spread operator works with arrays and objects. Output is shown below:</p>
 
-        <script >
-            function myFunction(x, y, z) {}
-const args = [0, 1, 2];
- console.log(myFunction(...args));
+    <div id="output"></div>
 
+    <script>
+        // Helper function to append lines to the output div
+        function showOutput(text) {
+            const div = document.getElementById("output");
+            const p = document.createElement("p");
+            p.className = "line";
+            p.textContent = text;
+            div.appendChild(p);
+        }
 
-      const parts = ["shoulders", "knees"];
-const lyrics = ["head", ...parts, "and", "toes"];
-//  ["head", "shoulders", "knees", "and", "toes"]
-console.log(lyrics)
-</script>
-    </body>
+        // ✅ Spread with arrays
+        const parts = ["shoulders", "knees"];
+        const lyrics = ["head", ...parts, "and", "toes"];
+
+        showOutput("Spread with arrays ");
+       console.log("\n\t");
+
+        lyrics.forEach(word => showOutput(word));
+
+        // ✅ Spread with objects
+        const defaultSettings = {
+            theme: "light",
+            fontSize: "16px",
+            sidebar: true
+        };
+
+        const userSettings = {
+            theme: "dark",
+            fontSize: "18px"
+        };
+
+        const finalSettings = { ...defaultSettings, ...userSettings };
+
+        showOutput("⚙️ Merged Settings:");
+        for (const key in finalSettings) {
+            showOutput(`${key}: ${finalSettings[key]}`);
+        }
+
+        // ✅ Spread into function arguments
+        function greet(a, b, c) {
+            showOutput(`👋 Hello ${a}, ${b}, and ${c}`);
+        }
+
+        const names = ["Alice", "Bob", "Charlie"];
+        greet(...names);
+    </script>
+</body>
 </html>
